@@ -1,0 +1,377 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+
+    <title>Starter Template for Bootstrap</title>
+<style>
+.a {
+    margin:6px;
+}    
+
+.s {
+    color: black;
+    background-color: white;
+}
+.s :hover{
+    color: red;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100; /* Behind the navbar */
+  padding: 0;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+.sidebar :hover{
+    color: red;
+}
+.sidebar-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 48px; /* Height of navbar */
+  height: calc(100vh - 48px);
+  padding-top: .5rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+.sidebar .nav-link {
+  font-weight: 500;
+  color:black;
+}
+
+.sidebar .nav-link .feather {
+  margin-right: 4px;
+  color:black;
+}
+
+.sidebar .nav-link.active {
+  color: red;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+  color: red;
+}
+
+.sidebar-heading {
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+</style>
+</head>
+
+  <body style="background-color:#ebeae6;">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <nav class="navbar navbar-light bg-light">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+                <img src="logsuit.png" alt="" width="80" height="40">
+              </a>
+            </div>
+          </nav>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          </form>
+         <a><i class="fas fa-bell"></i></a>
+         <a class="nav-link " href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg" width="40" height="40" class="rounded-circle">
+          </a>
+
+        </div>
+      </nav>
+  <div class="row">
+     
+  <nav class="col-md-2 d-none d-md-block bg-light sidebar" style="margin-top:2px;">
+    <div class="sidebar-sticky">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">
+            <i class="fa fa-home" aria-hidden="true">Home</i> <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-hand-holding-usd">Orders</i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <span data-feather="shopping-cart"></span>
+            <i class="fa fa-product-hunt">Products</i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <span data-feather="users"></span>
+            <i class="fas fa-user-friends">Customers</i> 
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-warehouse">WareHouse</i>
+          </a>
+        </li>
+      </ul>
+
+      
+    </div>
+  </nav>
+<div class="col-md-6">
+    <div class="card a">
+        <div class="card-body ">
+            <p>< Product</p>
+            <h3>Add Product</h3>
+            <form>
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">First Name</label>
+                  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name">
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Description</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+              </form>  
+        </div>
+      </div>
+      
+
+      <div class="card a">
+        <div class="card-body ">
+            <h3>Add Product</h3>
+            <form>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="customFile">
+                    <label class="custom-file-label" for="customFile"><i class="far fa-photo-video"></i></label>
+                  </div>
+              </form>  
+        </div>
+      </div>
+      
+
+    
+      <div class="card a">
+        <div class="card-body">
+            <h3>Inventory </h3>
+            <form>
+                <div class="form-group">
+                    <label for="sku">SKU(Stock Keeping Unit):</label>
+                    <input type="text" class="form-control" id="sku">
+                  </div>
+                  <div class="form-group">
+                    <label for="barcode">Barcode:(ISBN,UPC,GTIN,etc)</label>
+                    <input type="password" class="form-control" id="barcode">
+                  </div>     
+           
+           
+           
+            </form>  
+        </div>
+      </div>  
+      
+
+
+      <div class="card a" >
+        <div class="card-body">
+            <h3>Variants </h3>
+            <form>
+                <div class="table-responsive"> 
+                    <table class="table "> 
+                      
+                      <tbody id="tbody"> 
+                
+                      </tbody> 
+                    </table> 
+                  </div> 
+                  
+                   <a id="addBtn" style="color: blue;">+Add Another Option </a>
+            </form>  
+        </div>
+      </div>  
+
+      <div class="card a" >
+        <div class="card-body">
+        
+            <form>
+                <div class="table-responsive"> 
+                        
+                      
+                      <table class="table">
+                        <thead class="thead-light">
+                          <tr>
+                            <th scope="col">Variant</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Vendor</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Sku</th>
+
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                           
+                            <td>44</td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                            <td><select name="qty" id="qty">
+                                <option value="1">1</option>
+                                
+                              </select></td>
+                              <td><input type="text"></td>
+                          </tr>
+                    
+                        </tbody>
+                      </table>
+                  </div> 
+                  
+                  
+            </form>  
+        </div>
+      </div>  
+   
+</div>
+<div class="col-md-4" >
+    <div class="card a">
+        <div class="card-body ">
+
+         
+
+            <h3><b>Quantity</b></h3>
+            <form>
+                <div class="form-group">
+                    <label for="sku">Available:</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                          <span class="input-group-text" id="basic-addon2">Qty</span>
+                        </div>
+                      </div>
+                      <h3><b>Pricing</b></h3>
+                      <div class="form-group">
+                        <label for="exampleFormControlInput1">Price</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="exampleFormControlInput1">Cost Per Item</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name">
+                      </div>
+                      <h3><b>Product Details</b></h3>
+                      <div class="form-group">
+                        <label for="exampleFormControlInput1">Product Type</label>
+                        <select class="custom-select">
+                            <option selected>RedmiNote9Pro</option>
+                            <option value="1">Nokia</option>
+                          </select>
+                      </div>
+                      <h3><b>Tags</b></h3>
+                      <div class="form-group">
+                        <label for="exampleFormControlInput1">Type Tags</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name">
+                      </div>
+            
+                </div>   
+           
+           
+           
+            </form>  
+        </div>
+      </div>  
+
+
+</div>
+
+  </div>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> 
+<script> 
+    $(document).ready(function () { 
+  
+      // Denotes total number of rows 
+      var rowIdx = 0; 
+  
+      // jQuery button click event to add a row 
+      $('#addBtn').on('click', function () { 
+  
+        // Adding a row inside the tbody. 
+        $('#tbody').append(`<tr id="R${++rowIdx}"> 
+             <td class="row-index text-center"> 
+                <select class="form-select" aria-label="Default select example">
+  <option selected>Size/option>
+  <option value="44">44</option>
+  <option value="45">45</option>
+  <option value="46">46</option>
+</select>
+             </td> 
+          <td>
+            <div class="form-group">
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+          </td>   
+              <td class="text-center"> 
+                
+               <a class="remove"><i class="fas fa-trash"></i></a>
+
+                </td> 
+              </tr>`); 
+      }); 
+  
+      // jQuery button click event to remove a row. 
+      $('#tbody').on('click', '.remove', function () { 
+  
+        // Getting all the rows next to the row 
+        // containing the clicked button 
+        var child = $(this).closest('tr').nextAll(); 
+  
+        // Iterating across all the rows  
+        // obtained to change the index 
+        child.each(function () { 
+  
+          // Getting <tr> id. 
+          var id = $(this).attr('id'); 
+  
+          // Getting the <p> inside the .row-index class. 
+          var idx = $(this).children('.row-index').children('p'); 
+  
+          // Gets the row number from <tr> id. 
+          var dig = parseInt(id.substring(1)); 
+  
+          // Modifying row index. 
+          idx.html(`Row ${dig - 1}`); 
+  
+          // Modifying row id. 
+          $(this).attr('id', `R${dig - 1}`); 
+        }); 
+  
+        // Removing the current row. 
+        $(this).closest('tr').remove(); 
+  
+        // Decreasing total number of rows by 1. 
+        rowIdx--; 
+      }); 
+    }); 
+  </script> 
+</body>
+</html>
